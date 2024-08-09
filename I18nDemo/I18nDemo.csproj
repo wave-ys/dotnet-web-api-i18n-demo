@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Resources\Localization.FooLocalization.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Localization.FooLocalization.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Localization.ValidationLocalization.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Localization.ValidationLocalization.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Resources\Localization.FooLocalization.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Localization.FooLocalization.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\Localization.ValidationLocalization.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Localization.ValidationLocalization.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
